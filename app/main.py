@@ -4,13 +4,14 @@ from datetime import datetime
 from fastapi import FastAPI
 
 from db import create_all_table
-from .routers import customers, invoices, transactions
+from .routers import customers, invoices, transactions, plans
 
 
 app = FastAPI(lifespan=create_all_table)
 app.include_router(customers.router)
 app.include_router(invoices.router)
 app.include_router(transactions.router)
+app.include_router(plans.router)
 
 country_timezones = {
   'CO': 'America/Bogota',
