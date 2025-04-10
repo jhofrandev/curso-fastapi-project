@@ -32,3 +32,6 @@ async def time(iso_code: str):
   timezone_str = country_timezones.get(iso)
   tz = zoneinfo.ZoneInfo(timezone_str)
   return {'time': datetime.now(tz)}
+
+
+# add this
