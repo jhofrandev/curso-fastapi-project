@@ -8,7 +8,7 @@ sqlite_url = f"sqlite:///{sqlite_name}"
 
 engine = create_engine(sqlite_url)
 
-def create_all_table(app: FastAPI):
+def create_all_table(app: FastAPI): 
   SQLModel.metadata.create_all(engine)
   yield
 
